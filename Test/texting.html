@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: grid;
+			place-items: center;
+		}
+		form{
+			width: 500px;
+			height: 500px;
+		}
+		label{
+			width: 100%;
+			display: block;
+			margin-bottom: 10px;
+		}
+		input{
+			width: 100%;
+			padding: 20px;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #333;
+		}
+		button{
+			width: 100%;
+			margin-top: 20px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<form>
+		<label>Enter New Task</label>
+		<input type="text" id="task" />
+
+		<button type="submit" id="btn" >Add Task</button>
+	</form>
+
+
+	<script type="text/javascript">
+		// console.log('hi');
+
+
+		document.querySelector("form").addEventListener("submit",function(e){
+
+			e.preventDefault();
+
+			const getnewtasks = document.getElementById("task").value;
+			// console.log(getnewtasks);
+
+			// localStorage.setItem('mytask',getnewtasks);
+
+			let alltasks;
+
+			if (localStorage.getItem("mytask") === null){
+				alltasks = [];
+			}else{
+				alltasks = JSON.parse(localStorage.getItem('mytask'));
+			}
+
+
+			
+
+			alltasks.push(getnewtasks);
+
+			// console.log(alltasks);
+
+
+			// JSON [] Format
+			localStorage.setItem('mytask',JSON.stringify(alltasks));
+			
+		});
+
+
+		// console.log(JSON.parse(localStorage.getItem('mytask')));
+		// console.log(typeof localStorage.getItem("mytask"));
+
+
+		let getalltasks = localStorage.getItem("mytask");
+		getalltasks=JSON.parse(getalltasks);
+		console.log(getalltasks);
+
+		getalltasks.forEach(function(getalltasks){
+			console.log(getalltasks);
+		});
+	</script>
+
+</body>
+</html>
