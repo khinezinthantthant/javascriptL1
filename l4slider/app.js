@@ -65,3 +65,19 @@ function carousel(slidenum){
 // slide 		0		1		2
 // currslide 1-1 =0 	2-1=1	3-1=2
 
+
+
+
+
+// EXTRA
+
+
+// for(var z=0; z<slides.length;z++){
+// 	// console.log(slides[z]);
+
+// 	if(slides[z].classList.contains('show')){
+// 		console.log('hi');
+// 		slides[z].style.display="block";
+// 		dots[z].className +=" active";
+// 	}
+// }

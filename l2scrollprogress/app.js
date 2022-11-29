@@ -20,7 +20,7 @@ function scrollpoint(){
 	var getscrollheight = document.documentElement.scrollHeight;
 	// console.log(getscrollheight);
 	var getclientheight = document.documentElement.clientHeight;
-	// console.log(getclientheight);
+	// console.log(getclientheight); 
 
 	var calheight = getscrollheight - getclientheight;
 
@@ -38,4 +38,4 @@ function scrollpoint(){
 
 function printme(){
 	window.print();
-}
+} 

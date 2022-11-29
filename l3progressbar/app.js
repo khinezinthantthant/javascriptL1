@@ -1,6 +1,6 @@
 var getprogressbar = document.querySelector(".progress-bar");
 var getdownloadbtn = document.querySelector(".download-btn");
-var seturl ="https://linkedin.com";
+// var seturl ="https://linkedin.com";
 
 getdownloadbtn.addEventListener("click",function(){
 	// console.log('hi');
